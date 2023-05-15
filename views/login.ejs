@@ -23,5 +23,25 @@
     <p>Don't have an account? <a href="/register">Register</a></p>
   </div>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function login() {
+      // Assume you have a login form with email and password inputs
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      // Make an AJAX request to the login endpoint
+      $.ajax({
+        url: "/login",
+        type: "POST",
+        data: { email, password },
+        success: function(response) {
+        },
+        error: function(xhr, status, error) {
+        }
+      });
+    }
+  </script>
 </body>
 </html>

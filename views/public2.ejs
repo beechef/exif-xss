@@ -125,8 +125,8 @@
         // renderExif($("img")[0].src);
       });
 
-      var tags;
       async function renderExif(imageUrl) {
+        var tags;
         tags = await ExifReader.load(imageUrl);
         var compression = document.getElementById("compression");
         var filter = document.getElementById("filter");
@@ -134,11 +134,11 @@
         var height = document.getElementById("height");
         var description = document.getElementById("description");
 
-        compression.innerHTML = tags?.Compression?.description;
-        filter.innerHTML = tags?.Filter?.description;
-        width.innerHTML = tags["Image Width"]?.description;
-        height.innerHTML = tags["Image Height"]?.description;
-        description.innerHTML = tags?.description?.description;
+        compression.textContent = tags?.Compression?.description;
+        filter.textContent = tags?.Filter?.description;
+        width.textContent = tags["Image Width"]?.description;
+        height.textContent = tags["Image Height"]?.description;
+        description.textContent = tags?.description?.description;
       }
 
       function getData(endPoint) {
